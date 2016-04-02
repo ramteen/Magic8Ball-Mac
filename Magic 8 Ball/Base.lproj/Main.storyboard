@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="YRe-R2-VGs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle1" translatesAutoresizingMaskIntoConstraints="NO" id="F26-Zg-84i">
+                                <rect key="frame" x="130" y="141" width="341" height="317"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="31q-5g-jPb"/>
+                                    <constraint firstAttribute="height" constant="317" id="qsG-Id-thf"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask a question..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUq-c8-8Vq">
+                                <rect key="frame" x="32" y="57" width="537" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="keyboardDismissed:" destination="BYZ-38-t0r" eventType="touchCancel" id="knH-4l-Vnk"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-nA-yAI">
+                                <rect key="frame" x="59" y="275" width="483" height="49"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-nh-g9o">
+                                <rect key="frame" x="0.0" y="537" width="600" height="63"/>
+                                <state key="normal" title="Shake" backgroundImage="button"/>
+                                <connections>
+                                    <action selector="shakeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hd-bR-DiQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KMS-Cy-46c"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerY" secondItem="Eqf-nA-yAI" secondAttribute="centerY" id="KuO-lz-5Zu"/>
+                            <constraint firstItem="yUq-c8-8Vq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="Omg-73-hVk"/>
+                            <constraint firstItem="yUq-c8-8Vq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="QW8-g8-8aa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9d8-nh-g9o" secondAttribute="bottom" id="QaR-EB-8cc"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerX" secondItem="9d8-nh-g9o" secondAttribute="centerX" id="SLQ-fc-avw"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerX" secondItem="YRe-R2-VGs" secondAttribute="centerX" id="X4d-RR-qfE"/>
+                            <constraint firstAttribute="trailing" secondItem="9d8-nh-g9o" secondAttribute="trailing" id="cKr-M5-omM"/>
+                            <constraint firstItem="9d8-nh-g9o" firstAttribute="top" secondItem="F26-Zg-84i" secondAttribute="bottom" constant="79" id="caQ-JH-dTq"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k69-kO-SXz"/>
+                            <constraint firstItem="9d8-nh-g9o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="onu-T5-HYn"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerX" secondItem="Eqf-nA-yAI" secondAttribute="centerX" id="pkK-NG-jA9"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerX" secondItem="yUq-c8-8Vq" secondAttribute="centerX" id="r0S-gc-rFs"/>
+                            <constraint firstItem="9d8-nh-g9o" firstAttribute="top" secondItem="F26-Zg-84i" secondAttribute="bottom" constant="79" id="tmH-pN-Mu0"/>
+                            <constraint firstItem="F26-Zg-84i" firstAttribute="centerY" secondItem="YRe-R2-VGs" secondAttribute="centerY" id="xa1-Je-bCm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonOutlet" destination="9d8-nh-g9o" id="psr-l5-JaI"/>
+                        <outlet property="circleOutlet" destination="F26-Zg-84i" id="Z2m-zi-p6C"/>
+                        <outlet property="textOutlet" destination="Eqf-nA-yAI" id="0E2-cY-vwW"/>
+                        <outlet property="tfOutlet" destination="yUq-c8-8Vq" id="JuQ-Ta-jHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="696"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1080" height="1920"/>
+        <image name="button" width="1080" height="161"/>
+        <image name="circle1" width="843" height="843"/>
+    </resources>
+</document>
